@@ -1,0 +1,7 @@
+{
+	email admin@example.com
+}
+
+zafarullahportfolio.space-z.ai {
+	reverse_proxy localhost:3000
+}
