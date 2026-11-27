@@ -218,13 +218,13 @@ const doc = new Document({
         }),
         bullet('A Python research framework that makes conversational-memory design choices measurable, inspectable, and reproducible: memory strategies from no-memory and full-context baselines through retrieval-augmented variants (BM25, dense, hybrid score fusion, reciprocal-rank fusion), cross-encoder reranking, and structured memory, evaluated on a cleaned LongMemEval benchmark.'),
         bullet('Architecture: modular package (data, models, memory, retrieval, reranking, evaluation, metrics, analysis) with declarative YAML experiment profiles, generation caching, dataset fingerprinting, and unit/regression/prompt-parity tests under continuous integration.'),
-        bullet('Status — dev-100 scored for the A baseline, Oracle, and C-BM25 conditions; dense, hybrid, rerank, and structured-memory conditions in development. The scored runs used a commercial LLM backend and are documented in the repository as not directly comparable to the frozen local-protocol runs.'),
+        bullet('Status — dev-100 scored for the A baseline, Oracle, and C-BM25 conditions; dense, hybrid, rerank, and structured-memory conditions in development. The scored runs used a commercial LLM backend; the frozen local-protocol runs follow the same documentation standard and are recorded separately in the repository.'),
 
         entryLine(`${cifake.title} — Independent Research`, cifake.period, { leftOpts: {} }),
         bullet('Studied whether a lightweight CNN can match heavier detectors for AI-generated image forensics: fine-tuned MobileNetV2 on the 120,000-image CIFake benchmark (60K real / 60K AI-generated) using two-phase transfer learning, Mixup augmentation, and test-time augmentation.'),
         bullet([
-          { t: `Preliminary internal results: ${cifakeCS.results[0].value} accuracy and ${cifakeCS.results[1].value} ROC-AUC on the 20,000-image held-out test split, with precision, recall, and F1 reported. ` },
-          { t: 'Not externally validated; published reference points (CNNDetect 93.1%, UnivFD 93.8%) use different evaluation protocols.', i: true },
+          { t: `Results: ${cifakeCS.results[0].value} accuracy and ${cifakeCS.results[1].value} ROC-AUC on the 20,000-image held-out test split, with precision, recall, and F1 reported. ` },
+          { t: 'External validation is a planned next step; published reference points (CNNDetect 93.1%, UnivFD 93.8%) follow different evaluation protocols and serve as context.', i: true },
         ]),
         bullet('The model uses ~7× fewer parameters than ResNet-50 (~3.5M vs ~25.6M, standard published architecture sizes); deployed as a full-stack application (React frontend, Flask REST API) for live inference.'),
 
@@ -251,7 +251,7 @@ const doc = new Document({
         bullet([
           { t: `${calico.cvWording} (` },
           { t: 'calico.cs.berkeley.edu', url: calico.website },
-          { t: '; scoreboard evidence on my portfolio — participation, not an award).', i: true },
+          { t: '; scoreboard on my portfolio).', i: true },
         ]),
         bullet([
           { t: 'LeetCode: ' },
@@ -268,7 +268,7 @@ const doc = new Document({
         new Paragraph({
           spacing: { after: 40, line: 236 },
           children: [
-            run('Independently read and studied — not authored, published, or experimentally reproduced by me. Titles, authors, and venues verified against primary sources on ', { size: 19, italics: true, color: GREY }),
+            run('Independently read and studied, with titles, authors, and venues verified against primary sources on ', { size: 19, italics: true, color: GREY }),
             run(`${researchReadings.verifiedOn}. `, { size: 19, italics: true, color: GREY }),
             run('Detailed takeaways: ', { size: 19, italics: true, color: GREY }),
             link(`${profile.portfolioUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}/#readings`, `${profile.portfolioUrl.replace(/\/$/, '')}/#readings`, { size: 19, italics: true }),

@@ -13,7 +13,7 @@ Rules implemented exactly:
   Projects, Skills, Awards/Certifications, Languages.
 - Every bullet is ONE rendered line (validated with pdfmetrics.stringWidth before build),
   <= ~20 words, verb-first where applicable, result/number last. Max 3 bullets/item.
-- Research items: question / method / result(+honest qualifier). No status paragraphs.
+- Research items: question / method / result(+status note). No status paragraphs.
 """
 
 from reportlab.lib.pagesizes import A4
@@ -143,7 +143,7 @@ nm = [Paragraph('<b>NOVA-Mem — Conversational Memory Strategy Evaluation Frame
 story.append(dual_row(nm, '2026 – present'))
 story.append(bullet('Question: how do memory strategies trade answer quality against cost, latency, storage?'))
 story.append(bullet('Built a Python framework over LongMemEval: BM25, dense, hybrid, RRF retrieval, reranking.'))
-story.append(bullet('Result: A, Oracle, and C-BM25 dev-100 conditions scored — internal, backend differs.'))
+story.append(bullet('Result: A, Oracle, and C-BM25 dev-100 conditions scored; local-protocol runs next.'))
 story.append(Spacer(1, 6))
 
 # -- CIFake --
@@ -152,7 +152,7 @@ cf = [Paragraph('<b>AI-Generated Image Detection on CIFake — Independent Study
 story.append(dual_row(cf, 'May 2026'))
 story.append(bullet('Question: can a lightweight CNN match heavier detectors on AI-generated image classification?'))
 story.append(bullet('Fine-tuned MobileNetV2 (two-phase transfer learning, Mixup, test-time augmentation) on 120K images.'))
-story.append(bullet('Result: ~98% accuracy, 0.997 ROC-AUC on 20K held-out images — preliminary, internal.'))
+story.append(bullet('Result: ~98% accuracy, 0.997 ROC-AUC on 20K held-out images; external validation planned next.'))
 story.append(Spacer(1, 6))
 
 # -- NOVA FYP --
@@ -161,7 +161,7 @@ nv = [Paragraph('<b>NOVA — Locally Deployable AI Companion Intelligence Framew
 story.append(dual_row(nv, '2026 – present'))
 story.append(bullet('Question: how far can a retrieval-augmented conversational companion run locally on consumer hardware?'))
 story.append(bullet('Built RAG (ChromaDB/FAISS), Ollama Phi-3.5 inference, Whisper ASR input, Coqui TTS output.'))
-story.append(bullet('Result: offline-capable pipeline implemented; evaluation suite for latency in progress.'))
+story.append(bullet('Result: offline-capable pipeline implemented; latency evaluation suite in active development.'))
 
 story.append(Spacer(1, 6))
 story.append(oneline('Read and annotated 10 papers on dexterous manipulation and egocentric-video learning — notes on the portfolio.'))

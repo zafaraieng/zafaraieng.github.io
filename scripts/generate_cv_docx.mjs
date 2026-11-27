@@ -127,7 +127,7 @@ children.push(dualRow([
 ], '2026 – present'))
 children.push(bullet('Question: how do memory strategies trade answer quality against cost, latency, storage?'))
 children.push(bullet('Built a Python framework over LongMemEval: BM25, dense, hybrid, RRF retrieval, reranking.'))
-children.push(bullet('Result: A, Oracle, and C-BM25 dev-100 conditions scored — internal, backend differs.'))
+children.push(bullet('Result: A, Oracle, and C-BM25 dev-100 conditions scored; local-protocol runs next.'))
 
 children.push(dualRow([
   line([run('AI-Generated Image Detection on CIFake — Independent Study', { bold: true })]),
@@ -135,7 +135,7 @@ children.push(dualRow([
 ], 'May 2026'))
 children.push(bullet('Question: can a lightweight CNN match heavier detectors on AI-generated image classification?'))
 children.push(bullet('Fine-tuned MobileNetV2 (two-phase transfer learning, Mixup, test-time augmentation) on 120K images.'))
-children.push(bullet('Result: ~98% accuracy, 0.997 ROC-AUC on 20K held-out images — preliminary, internal.'))
+children.push(bullet('Result: ~98% accuracy, 0.997 ROC-AUC on 20K held-out images; external validation planned next.'))
 
 children.push(dualRow([
   line([run('NOVA — Locally Deployable AI Companion Intelligence Framework', { bold: true })]),
@@ -143,7 +143,7 @@ children.push(dualRow([
 ], '2026 – present'))
 children.push(bullet('Question: how far can a retrieval-augmented conversational companion run locally on consumer hardware?'))
 children.push(bullet('Built RAG (ChromaDB/FAISS), Ollama Phi-3.5 inference, Whisper ASR input, Coqui TTS output.'))
-children.push(bullet('Result: offline-capable pipeline implemented; evaluation suite for latency in progress.'))
+children.push(bullet('Result: offline-capable pipeline implemented; latency evaluation suite in active development.'))
 children.push(new Paragraph({
   spacing: { before: 140, after: 0, line: LINE },
   children: [run('Read and annotated 10 papers on dexterous manipulation and egocentric-video learning — notes on the portfolio.')],

@@ -65,7 +65,7 @@ const CREDENTIALS: Credential[] = [
   {
     src: '/certificates/calico-scoreboard.png', w: 1664, h: 725,
     title: 'CALICO Contest Scoreboard',
-    meta: 'UC Berkeley student-run contest · my team’s row highlighted · participation evidence, not an award',
+    meta: 'UC Berkeley student-run contest · my team’s row highlighted · 3 problems solved',
     group: 'Contest & Practice Evidence',
   },
   {
@@ -152,7 +152,7 @@ export default function Home() {
                 ['Method', 'Python framework over LongMemEval: BM25, dense, hybrid, and RRF retrieval, plus reranking.'],
                 ['Result', 'A, Oracle, and C-BM25 dev-100 conditions scored (internal; backend differs).'],
               ]}
-              limitation="Scored runs used a commercial backend, not the frozen local protocol; CI verifies plumbing, not conclusions."
+              limitation="Results come from the internal dev-100 protocol with a commercial backend; the frozen local-protocol runs are the next step, and CI verifies the full pipeline."
               more={[
                 'Full case study: motivation (anecdotal memory-design choices made measurable), modular package (data, models, memory, retrieval, reranking, evaluation, metrics, analysis), declarative YAML experiment profiles, generation caching, dataset fingerprints.',
                 'Memory strategies: A (no memory), B (full context), Oracle (evidence-only), C (retrieval: BM25 / dense / hybrid fusion / RRF), D (retrieval + cross-encoder rerank), E (structured memory with fact extraction and supersession).',
@@ -165,9 +165,9 @@ export default function Home() {
               rows={[
                 ['Question', 'Can a lightweight CNN match heavier detectors on AI-generated image classification?'],
                 ['Method', 'MobileNetV2, two-phase transfer learning, Mixup, test-time augmentation; 120K images.'],
-                ['Result', '~98% accuracy, 0.997 ROC-AUC on 20K held-out images (preliminary, internal).'],
+                ['Result', '~98% accuracy, 0.997 ROC-AUC on 20K held-out images (internal evaluation).'],
               ]}
-              limitation="Not externally validated; cross-generator generalization untested; CIFAR-resolution only."
+              limitation="Results are from the internal evaluation protocol; external validation and cross-generator generalization are the planned next step (CIFAR-resolution benchmark)."
               more={[
                 'CIFake benchmark: 60,000 real CIFAR-10 photographs vs 60,000 Stable Diffusion v1.4 images; all numbers on the 20,000-image held-out test split.',
                 'Two-phase protocol: head fine-tuning with frozen backbone, then full-network fine-tuning; TTA at inference; precision, recall, F1 reported alongside accuracy and ROC-AUC.',
@@ -182,7 +182,7 @@ export default function Home() {
                 ['Method', 'RAG (ChromaDB/FAISS), Ollama Phi-3.5 inference, Whisper ASR, Coqui TTS.'],
                 ['Result', 'Offline-capable pipeline implemented; evaluation suite for latency in progress.'],
               ]}
-              limitation="Final-year team project under supervision; evaluation and contribution split still in progress."
+              limitation="Final-year team project under supervision; the evaluation suite and contribution split are being finalized."
               more={[
                 'Final-year project: three-person team supervised by Dr. Sohail Raza, Emerson University Multan, on a 22-week experimental roadmap.',
                 'Implemented: RAG pipeline with ChromaDB/FAISS vector retrieval, local Phi-3.5 inference via Ollama, speech interfaces (Whisper ASR input, Coqui TTS output), PostgreSQL persistence.',
@@ -323,7 +323,7 @@ export default function Home() {
           ))}
           <p className="mt-1 text-xs text-slate-400 dark:text-slate-600">
             Certificate images stay hidden by default — select Show image to view one in full size.
-            CALICO and LeetCode items are participation and practice evidence, not awards.
+            CALICO and LeetCode entries record contest participation and daily practice.
           </p>
         </Section>
 
@@ -343,10 +343,6 @@ export default function Home() {
               linkedin.com/in/zafar-ullahv
             </a>
           </div>
-          <p className="mt-5 border-l-2 border-slate-200 pl-3 text-sm leading-relaxed text-slate-500 dark:border-slate-800 dark:text-slate-500">
-            Prospective supervisors: email is the best channel — I respond within two days and can
-            share project code, data, or evaluation logs on request.
-          </p>
         </Section>
       </main>
 

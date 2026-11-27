@@ -20,10 +20,11 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · shadcn/ui
 bun install        # or: npm install / pnpm install
 bun run dev        # development server on http://localhost:3000
 bun run lint       # ESLint
-bun run build      # static production build (outputs to ./out)
+bun run build      # production build (standalone output)
+bun run start      # serve the production build
 ```
 
-Requires [Bun](https://bun.sh) 1.3.4 (or Node.js 20.9+ with npm — swap `bun` for `npm run`).
+Requires [Bun](https://bun.sh) (or Node.js 20+ with npm — swap `bun` for `npx`/`npm run`).
 
 ## Structure
 
@@ -63,6 +64,24 @@ bun scripts/export_readings.mjs      # readings log as Markdown
 
 The layout follows the academic-homepage tradition (Karpathy, Abbeel, Fei-Fei Li, Levine, Huang): single column, link-dense prose, labeled flat lists, per-entry grammar (title → labeled rows → notes), no decorative cards. Certificate images render on demand — text rows with a *Show image* button that opens a lightbox — so the page stays fast and print-friendly.
 
-## Deployment
+## Deployment — GitHub Pages
 
-The site is published to GitHub Pages from the `main` branch using `.github/workflows/deploy.yml`. The workflow installs the locked Bun dependencies, runs `bun run build`, and deploys the generated `./out` directory. This repository uses Next.js static export; API route handlers and server-only runtime features are not part of the Pages deployment.
+This repository is configured to publish the portfolio to **https://zafaraieng.github.io/** using GitHub Actions. The site is exported as static HTML, CSS, and JavaScript into `out/`; GitHub Pages does not run a Next.js Node server.
+
+### One-time GitHub setup
+
+1. Push this project to the repository named `zafaraieng.github.io` under the `zafaraieng` GitHub account. The repository name is what gives the site its root URL.
+2. Open the repository's **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Push to the `main` branch (or run **Deploy portfolio to GitHub Pages** manually from the Actions tab). The workflow installs the locked Bun dependencies, runs `bun run build`, and deploys the `out/` directory.
+5. Check the **Actions** tab. When the workflow succeeds, the site is published at `https://zafaraieng.github.io/`.
+
+Every later push to `main` automatically republishes the site. The public URL remains unchanged.
+
+### Static-hosting notes
+
+- `next.config.ts` uses `output: "export"` and `trailingSlash: true`; the `/readings/` page is emitted as a static route.
+- `next/image` uses `unoptimized: true` because GitHub Pages does not provide the Next.js image-optimization server.
+- The current portfolio pages are static. Do not add server actions, request-dependent route handlers, cookies, server-side database calls, or other features requiring a running Next.js server unless the hosting platform is changed.
+- `prisma/schema.prisma` and `src/lib/db.ts` are not used by the published pages. GitHub Pages cannot host a Prisma-backed database or runtime API.
+- The build uses `next/font/google`; the GitHub Actions build therefore needs internet access to fetch the font during compilation.

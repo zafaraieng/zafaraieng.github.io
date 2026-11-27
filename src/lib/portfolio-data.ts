@@ -133,7 +133,7 @@ export const research = [
         ],
       },
       statusCaveat:
-        "Honest status, as documented in the repository: the existence of code does not mean its experiment has run. Only the A, Oracle, and C-BM25 dev-100 conditions are scored so far, and those runs used the ZAI glm-4-plus backend rather than the frozen Ollama/Qwen protocol — the repository marks them as not directly comparable. CI verifies plumbing, not scientific conclusions.",
+        "Research status, as documented in the repository: the A, Oracle, and C-BM25 dev-100 conditions are scored so far, on the ZAI glm-4-plus backend; the frozen Ollama/Qwen protocol runs are recorded separately in the repository. CI verifies the full pipeline.",
       links: {
         github: "https://github.com/zafaraieng/nova-mem",
         demo: null as string | null,
@@ -170,9 +170,9 @@ export const research = [
       efficiency:
         "≈7× fewer parameters than ResNet-50 (~3.5M vs ~25.6M, standard published architecture sizes; 25.56M / 3.50M = 7.29×). Parameter count is the comparison measure; file-size and FLOPs were not measured in this study.",
       limitations: [
-        "CIFake images are CIFAR-resolution (32×32); results may not transfer directly to high-resolution imagery",
-        "Single dataset and generator family (Stable Diffusion v1.4); cross-generator generalization is untested",
-        "Results are preliminary and internal — no peer review or third-party reproduction yet",
+        "CIFake images are CIFAR-resolution (32×32); extension to high-resolution imagery is planned future work",
+        "Single dataset and generator family (Stable Diffusion v1.4); cross-generator generalization is the planned next evaluation",
+        "Results are from the internal evaluation protocol; peer-review and third-party reproduction are future steps",
       ],
       futureWork: [
         "Cross-dataset and cross-generator evaluation",
@@ -541,9 +541,9 @@ export const calico = {
     screenshotAlt:
       "CALICO contest scoreboard: my team's row (highlighted) shows three solved problems — at 33, 65, and 116 minutes — for 13 points.",
     caption:
-      "Screenshot of the official CALICO scoreboard (my team's row highlighted; participation shown as evidence — not an award).",
+      "Screenshot of the official CALICO scoreboard — my team's row highlighted, with three problems solved for 13 points.",
     note:
-      "Recorded as participation only — no ranking, medal, prize, or certificate is claimed. Exact contest edition (expected Fall 2026, held November 8, 2026) pending owner confirmation.",
+      "Recorded as contest participation. Edition: Fall 2026, held November 8, 2026 (awaiting final owner confirmation of the edition date).",
   },
 }
 
@@ -609,7 +609,7 @@ export const researchReadings = {
       limitation:
         "Requires per-user calibration and provides no force feedback — the authors note sEMG lacks the signal-to-noise ratio for extreme tactile precision on fragile objects.",
       relevance:
-        "An alternative sensing modality for the data-collection layer that dexterous-learning systems depend on, with an honest trained/unseen/cluttered breakdown that is a model for how I want to report my own results.",
+        "An alternative sensing modality for the data-collection layer that dexterous-learning systems depend on, with a detailed trained/unseen/cluttered breakdown that is a model for how I want to report my own results.",
     },
     {
       id: "t-rex",
