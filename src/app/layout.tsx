@@ -8,7 +8,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zafarullahportfolio.space-z.ai"),
+  metadataBase: new URL("https://zafaraieng.github.io"),
   alternates: {
     canonical: "/",
   },
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Zafarullah — Undergraduate AI Researcher",
     description:
       "Computer Vision · Conversational AI · Robotics & Embodied AI. Independent research in AI-generated image detection, NOVA-Mem research software, and a verified robotics reading log. Exploring funded graduate research opportunities — Fall 2027.",
-    url: "https://zafarullahportfolio.space-z.ai",
+    url: "https://zafaraieng.github.io",
     siteName: "Zafarullah — Research Portfolio",
     type: "profile",
   },

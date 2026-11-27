@@ -168,7 +168,7 @@ const doc = new Document({
           spacing: { after: 16 },
           children: [
             run('Portfolio: ', { size: 18, color: GREY }),
-            link(profile.portfolioUrl.replace('https://', '') + '/', profile.portfolioUrl + '/', { size: 18 }),
+            link(profile.portfolioUrl.replace(/^https?:\/\//, '').replace(/\/$/, ''), profile.portfolioUrl, { size: 18 }),
             run('  ·  LinkedIn: ', { size: 18, color: GREY }),
             link('linkedin.com/in/zafar-ullahv', profile.linkedin, { size: 18 }),
             run('  ·  GitHub: ', { size: 18, color: GREY }),
@@ -271,7 +271,7 @@ const doc = new Document({
             run('Independently read and studied — not authored, published, or experimentally reproduced by me. Titles, authors, and venues verified against primary sources on ', { size: 19, italics: true, color: GREY }),
             run(`${researchReadings.verifiedOn}. `, { size: 19, italics: true, color: GREY }),
             run('Detailed takeaways: ', { size: 19, italics: true, color: GREY }),
-            link(`${profile.portfolioUrl.replace('https://', '')}/#readings`, `${profile.portfolioUrl}/#readings`, { size: 19, italics: true }),
+            link(`${profile.portfolioUrl.replace(/^https?:\/\//, '').replace(/\/$/, '')}/#readings`, `${profile.portfolioUrl.replace(/\/$/, '')}/#readings`, { size: 19, italics: true }),
             run('.', { size: 19, italics: true, color: GREY }),
           ],
         }),

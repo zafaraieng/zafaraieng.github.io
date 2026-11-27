@@ -15,7 +15,7 @@ lines.push(`> ${researchReadings.intro}`)
 lines.push('>')
 lines.push(`> **Disclaimer:** ${researchReadings.disclaimer}`)
 lines.push('>')
-lines.push(`> **Verified:** ${researchReadings.verifiedOn} · **Full annotated log:** ${profile.portfolioUrl}/#readings`)
+lines.push(`> **Verified:** ${researchReadings.verifiedOn} · **Full annotated log:** ${profile.portfolioUrl.replace(/\/$/, '')}/#readings`)
 lines.push('')
 
 researchReadings.papers.forEach((p, i) => {

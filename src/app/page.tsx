@@ -351,7 +351,7 @@ export default function Home() {
       </main>
 
       <footer className="mx-auto max-w-3xl px-5 pb-10 pt-4 text-xs text-slate-400 dark:text-slate-600">
-        Multan, Pakistan · zafarullahportfolio.space-z.ai
+        Multan, Pakistan · zafaraieng.github.io
       </footer>
 
       {/* lightbox */}

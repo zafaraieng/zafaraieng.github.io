@@ -25,6 +25,11 @@ FILES=(
   prisma/schema.prisma
 )
 
+# fail loudly if any required file is missing (zip would silently skip it)
+for f in "${FILES[@]}"; do
+  [ -f "$f" ] || { echo "MISSING FILE: $f"; exit 1; }
+done
+
 DIRS=(
   src
   public

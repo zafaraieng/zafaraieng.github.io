@@ -103,7 +103,7 @@ children.push(new Paragraph({
 }))
 children.push(line([run('Undergraduate AI Researcher — Computer Vision · Conversational AI · Robotics/Embodied AI', {})]))
 children.push(line([run('Multan, Pakistan · +92 306 7872856 · zafarullaharshad2@gmail.com', { color: MUTED })]))
-children.push(line([run('Portfolio: zafarullahportfolio.space-z.ai · GitHub: github.com/zafaraieng · LinkedIn: linkedin.com/in/zafar-ullahv', { color: MUTED })]))
+children.push(line([run('Portfolio: zafaraieng.github.io · GitHub: github.com/zafaraieng · LinkedIn: linkedin.com/in/zafar-ullahv', { color: MUTED })]))
 children.push(new Paragraph({
   spacing: { before: 80, after: 40, line: LINE },
   children: [run('Applying for fully funded MS/PhD admission (Fall 2027) in AI — computer vision, conversational AI, robotics/embodied AI.')],

@@ -7,7 +7,7 @@ export const profile = {
   phone: "+92 306 7872856",
   linkedin: "https://linkedin.com/in/zafar-ullahv",
   github: "https://github.com/zafaraieng",
-  portfolioUrl: "https://zafarullahportfolio.space-z.ai",
+  portfolioUrl: "https://zafaraieng.github.io/",
   cvUrl: "/Zafarullah_CV.pdf",
   photo: "/profile.jpeg",
   opportunityStatement: "Exploring funded graduate research opportunities — Fall 2027",

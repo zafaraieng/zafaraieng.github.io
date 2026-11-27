@@ -120,7 +120,7 @@ story = []
 story.append(Paragraph('ZAFARULLAH', S['name']))
 story.append(Paragraph('Undergraduate AI Researcher — Computer Vision · Conversational AI · Robotics/Embodied AI', S['tagline']))
 story.append(Paragraph('Multan, Pakistan · +92 306 7872856 · zafarullaharshad2@gmail.com', S['contact']))
-story.append(Paragraph('Portfolio: zafarullahportfolio.space-z.ai · GitHub: github.com/zafaraieng · LinkedIn: linkedin.com/in/zafar-ullahv', S['contact']))
+story.append(Paragraph('Portfolio: zafaraieng.github.io · GitHub: github.com/zafaraieng · LinkedIn: linkedin.com/in/zafar-ullahv', S['contact']))
 story.append(Spacer(1, 3))
 story.append(Paragraph('Applying for fully funded MS/PhD admission (Fall 2027) in AI — computer vision, conversational AI, robotics/embodied AI.', S['interest']))
 
